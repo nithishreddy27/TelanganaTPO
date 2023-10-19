@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Bar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .left-bar {
+            width: 20%;
+            height: 100vh;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: flex-start;
+            color: white;
+        }
+
+        .logo {
+            margin: 10px;
+            width: 50px;
+            /* Adjust the width of your logo */
+            height: 50px;
+            /* Adjust the height of your logo */
+            background-color: white;
+            /* Change to your logo image or background color */
+        }
+
+        .info {
+            width: 70%;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            /* Smooth background color transition */
+        }
+
+        .row:hover {
+            background-color: lightgray;
+            /* Change background color on hover */
+        }
+
+        .profile-icon {
+            width: 18%;
+            /* Adjust the size of the profile icon */
+            height: 45px;
+            /* Adjust the size of the profile icon */
+            margin-right: 10px;
+            border-radius: 100%;
+            background-color: white;
+            /* Change to your profile icon image or background color */
+        }
+
+        .name,
+        .phone {
+            display: flex;
+            flex-direction: column;
+            /* Display name and phone as separate lines */
+        }
+
+        .postpaid-button {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            display: none;
+            /* Initially hide the Postpaid button */
+            align-items: end;
+            /* Push to the right */
+        }
+
+        .red-button {
+            background-color: red;
+            padding: 5px;
+            border-radius: 15%;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            /* Add margin around the button */
+            border: none;
+            cursor: pointer;
+            display: flex;
+            /* Display add profile button and settings icon in a row */
+            align-items: center;
+        }
+
+        .settings-icon {
+            width: 30px;
+            /* Adjust the size of the settings icon */
+            height: 30px;
+            /* Adjust the size of the settings icon */
+            background-color: gray;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .settings-icon img {
+            width: 20px;
+            /* Adjust the size of the settings icon image */
+            height: 20px;
+            /* Adjust the size of the settings icon image */
+            fill: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left-bar">
+        <div style="margin: 10px;">
+            <div class="logo"></div>
+            <div class="row" onclick="togglePostpaid(1)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name" >Sumit</p>
+                   <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                    <button class="postpaid-button right:0" id="postpaid-1">Postpaid</button></div>
+                </div>
+            </div>
+            <div class="row" onclick="togglePostpaid(2)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name" >Sumit</p>
+                   <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                    <button class="postpaid-button right:0" id="postpaid-2">Postpaid</button></div>
+                </div>
+            </div>
+
+            <div class="row" onclick="togglePostpaid(3)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name">Sumit</p>
+                    <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                        <button class="postpaid-button right:0" id="postpaid-3">Postpaid</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" onclick="togglePostpaid(4)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name">Sumit</p>
+                    <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                        <button class="postpaid-button right:0" id="postpaid-4">Postpaid</button>
+                    </div>
+                </div>
+            </div>
+            <button class="red-button">add profile</button>
+        </div>
+    </div>
+    </div>
+    <script>
+        var activePostpaidButton = null;
+
+        function togglePostpaid(rowNumber) {
+            var postpaidButton = document.getElementById("postpaid-" + rowNumber);
+
+            // If there is an active Postpaid button, hide it
+            if (activePostpaidButton) {
+                activePostpaidButton.style.display = "none";
+            }
+
+            // Show the clicked Postpaid button and set it as active
+            postpaidButton.style.display = "block";
+            activePostpaidButton = postpaidButton;
+        }
+    </script>
+</body>
+
+</html>
