@@ -11,32 +11,91 @@
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&family=Ubuntu&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-HA1iQ8Dlvd+PsDmD+1qlXniq/zYZ+lhT9spmlX4kbguHr3psnHYcTAs17d/jzyQYUKOqOZuGJ8+UDV14bdm0AA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    integrity="sha512-HA1iQ8Dlvd+PsDmD+1qlXniq/zYZ+lhT9spmlX4kbguHr3psnHYcTAs17d/jzyQYUKOqOZuGJ8+UDV14bdm0AA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-o0Xre9ZoM4H5F2ODcLZYKJK+Es2g8j3FQh3lOv5zmcx4khVZcqOh4+LFB1DR+FeceRZj4qsyZkXFKBqP3oy7OQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <style>
-	 body {
-      margin: 0;
-      padding: 0;
-      background: url('https://res.cloudinary.com/dbenkbws8/image/upload/v1691485885/Rectangle_2_c5utnz.png') center center / cover no-repeat fixed;
-      height: 100vh;
-    }
+	  body {
+            margin: 0;
+            padding: 0;
+            background: url('https://res.cloudinary.com/dbenkbws8/image/upload/v1691485885/Rectangle_2_c5utnz.png') center center / cover no-repeat fixed;
+            height: 100vh;
+            font-family: 'Ubuntu', sans-serif;
+        }
 
-    .bg-image {
-      background-image: url('https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
 
-    .gallery-container {
-      max-height: calc(100vh - 150px); /* Adjust the value based on your design */
-      overflow-y: auto;
-    }
-	.footer {
-      background-color: #404040;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-	
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            transform-origin: center bottom;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+      
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .image-caption {
+            opacity: 1;
+        }
+
+		.lightbox-image {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .lightbox-image:hover {
+    transform: scale(1.1);
+  }
+
+        .footer {
+            background-color: #404040;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 </style>
 <body class="">
 	<div class="relative w-full inset-0">
@@ -45,10 +104,10 @@
 			alt="Background Image" />
 		<div class="absolute top-3 pt-2 w-full">
 			<div class="flex flex-row justify-center ">
-				<img class="h-[25mm] mx-3 -mt-2"
+				<img class="h-[35mm] mx-3 -mt-2"
 				src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png"/>
 				<h1
-				  class="font-fira-sans text-white md:py-3  text-center font-bold tracking-wide font-fira-sans text-[18px] md:text-[28px]"
+				  class="font-fira-sans text-white md:pt-8   text-center font-bold tracking-wide font-fira-sans text-[18px] md:text-[28px]"
 				>
 				  TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
 				</h1>
@@ -152,19 +211,67 @@
 					</ul>
 				</div>
 			</div>
-			<div class="flex justify-center my-10 p-3">
+			<div class="flex gallery-container justify-center my-10 p-3">
 
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-					
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3437_knjjaf.jpg" class="w-full h-auto rounded-lg p-2" />
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg" class="w-full h-auto rounded-lg p-2" />
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375629/gdfg_p33tog.jpg" class="w-full h-auto rounded-lg p-2" />
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/panel-1_wnvuus.jpg" class="w-full h-auto rounded-lg p-2" />
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3013_bakmj1.jpg" class="w-full h-auto rounded-lg p-2" />
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/hjkl_ikl43v.jpg" class="w-full h-auto rounded-lg p-2" />
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375640/IMG_2127_rpqb7i.jpg" class="w-full h-auto rounded-lg p-2" />
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375630/fghjk_oah89y.jpg" class="w-full h-auto rounded-md p-2" />
-				  <!-- Add more images as needed -->
+				<div class="grid gallery-item grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 " data-lightbox="gallery">
+					<a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375630/fghjk_oah89y.jpg" data-lightbox="gallery" class="lightbox-image">
+					<img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375630/fghjk_oah89y.jpg" class="w-full h-auto rounded-md p-2" />	</a>
+					<a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3437_knjjaf.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3437_knjjaf.jpg" class="w-full h-auto rounded-lg p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg" class="w-full h-auto rounded-lg p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375629/gdfg_p33tog.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375629/gdfg_p33tog.jpg" class="w-full h-auto rounded-lg p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/panel-1_wnvuus.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/panel-1_wnvuus.jpg" class="w-full h-auto rounded-lg p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3013_bakmj1.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3013_bakmj1.jpg" class="w-full h-auto rounded-lg p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/hjkl_ikl43v.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/hjkl_ikl43v.jpg" class="w-full h-auto rounded-lg p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375640/IMG_2127_rpqb7i.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375640/IMG_2127_rpqb7i.jpg" class="w-full h-auto rounded-lg p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710223200/IMG-20240312-WA0020_rkb9bp.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710223200/IMG-20240312-WA0020_rkb9bp.jpg" class="w-full h-auto  rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0021_unsoia.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0021_unsoia.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0011_u3ysaf.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0011_u3ysaf.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0013_oblueh.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0013_oblueh.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0012_qg3v93.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0012_qg3v93.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0015_n9tro4.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0015_n9tro4.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0022_gaowm7.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0022_gaowm7.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0018_arvub3.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0018_arvub3.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0014_ggnqhp.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0014_ggnqhp.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0023_ltvd9p.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0023_ltvd9p.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0019_nljcfp.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0019_nljcfp.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0026_p15yby.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0026_p15yby.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0016_r17j4f.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0016_r17j4f.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0017_ttnpqd.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0017_ttnpqd.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0028_aocci4.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0028_aocci4.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0027_lv1lad.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0027_lv1lad.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0029_vtphwf.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0029_vtphwf.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0025_krxo44.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0025_krxo44.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0024_szuz11.jpg" data-lightbox="gallery" class="lightbox-image">
+				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0024_szuz11.jpg" class="w-full h-auto rounded-md p-2" /></a>
+				  <img src="" class="w-full h-auto rounded-md p-2" />
+				  <img src="" class="w-full h-auto rounded-md p-2" />
+				  <img src="" class="w-full h-auto rounded-md p-2" />
+
 				</div>
 			  </div>
         </div>
@@ -190,12 +297,16 @@
 <footer>
 	
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+integrity="sha512-o0Xre9ZoM4H5F2ODcLZYKJK+Es2g8j3FQh3lOv5zmcx4khVZcqOh4+LFB1DR+FeceRZj4qsyZkXFKBqP3oy7OQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Add your existing scripts here -->
 <script>
-	// JavaScript code to toggle mobile menu
-	document
-		.getElementById("mobileMenuButton")
-		.addEventListener("click", function () {
-			const mobileMenu = document.getElementById("mobileMenu");
-			mobileMenu.classList.toggle("hidden");
-		});
+// JavaScript code to toggle mobile menu
+document.getElementById("mobileMenuButton").addEventListener("click", function () {
+  const mobileMenu = document.getElementById("mobileMenu");
+  mobileMenu.classList.toggle("hidden");
+});
 </script>
