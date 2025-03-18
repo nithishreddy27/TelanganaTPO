@@ -4,335 +4,250 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Telangana TPO Consortium</title>
-	<script src="https://cdn.tailwindcss.com"></script>
+	<title>TTPOC Events - Telangana TPO Consortium</title>
+	<meta name="description"
+		content="Explore past events organized by the Telangana TPO Consortium (TTPOC). Click on event cards to view exclusive event photos, industry collaborations, and networking opportunities." />
+	<meta name="keywords"
+		content="TTPOC Events, Telangana TPO Consortium, Training & Placement Events, College Placement Drives, Industry Networking, Corporate Relations, Career Fairs, Recruitment Drives, Workshops, Seminars" />
+	<meta name="author" content="Telangana TPO Consortium" />
+	<meta property="og:title" content="TTPOC Events - Telangana TPO Consortium" />
+	<meta property="og:description"
+		content="Discover exclusive events hosted by TTPOC, featuring industry experts, recruitment drives, and placement officer networking." />
+	<meta property="og:image"
+		content="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+	<meta property="og:url" content="https://yourwebsite.com/events.html" />
+	<link rel="icon" type="image/png"
+		href="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&family=Ubuntu&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-HA1iQ8Dlvd+PsDmD+1qlXniq/zYZ+lhT9spmlX4kbguHr3psnHYcTAs17d/jzyQYUKOqOZuGJ8+UDV14bdm0AA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
-    integrity="sha512-HA1iQ8Dlvd+PsDmD+1qlXniq/zYZ+lhT9spmlX4kbguHr3psnHYcTAs17d/jzyQYUKOqOZuGJ8+UDV14bdm0AA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-o0Xre9ZoM4H5F2ODcLZYKJK+Es2g8j3FQh3lOv5zmcx4khVZcqOh4+LFB1DR+FeceRZj4qsyZkXFKBqP3oy7OQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+		integrity="sha512-HA1iQ8Dlvd+PsDmD+1qlXniq/zYZ+lhT9spmlX4kbguHr3psnHYcTAs17d/jzyQYUKOqOZuGJ8+UDV14bdm0AA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+		integrity="sha512-o0Xre9ZoM4H5F2ODcLZYKJK+Es2g8j3FQh3lOv5zmcx4khVZcqOh4+LFB1DR+FeceRZj4qsyZkXFKBqP3oy7OQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		body {
+			background: url('https://res.cloudinary.com/dbenkbws8/image/upload/v1691485885/Rectangle_2_c5utnz.png') no-repeat center center fixed;
+			background-size: cover;
+		}
+	</style>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						ubuntu: ['Ubuntu', 'sans-serif'],
+						barlow: ['Barlow', 'sans-serif'],
+					},
+					colors: {
+						'consortium-blue': {
+							light: '#1d9cc0',
+							DEFAULT: '#032f4b',
+							dark: '#021e30',
+						},
+					},
+				}
+			}
+		}
+	</script>
 </head>
-<style>
-	  body {
-            margin: 0;
-            padding: 0;
-            background: url('https://res.cloudinary.com/dbenkbws8/image/upload/v1691485885/Rectangle_2_c5utnz.png') center center / cover no-repeat fixed;
-            height: 100vh;
-            font-family: 'Ubuntu', sans-serif;
-        }
 
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 16px;
-            padding: 20px;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s forwards;
-        }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            transform-origin: center bottom;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-      
-        .image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .gallery-item:hover .image-caption {
-            opacity: 1;
-        }
-
-		.lightbox-image {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .lightbox-image:hover {
-    transform: scale(1.1);
-  }
-
-        .footer {
-            background-color: #404040;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-</style>
-<body class="">
-	<div class="relative w-full inset-0">
-		<div class="absolute top-3 pt-2 w-full">
-			<div class="flex flex-row justify-center ">
-				<img class="h-[35mm] mx-3 -mt-2"
-				src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png"/>
-				<h1
-				  class="font-fira-sans text-white md:pt-8   text-center font-bold tracking-wide font-fira-sans text-[18px] md:text-[28px]"
-				>
-				  TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+<body class="relative min-h-screen">
+	<!-- Content Wrapper -->
+	<div class="relative z-10 w-full">
+		<!-- Navbar -->
+		<div class="w-full bg-consortium-blue-dark bg-opacity-90">
+			<div class="flex flex-row justify-center items-center py-2">
+				<img class="h-20 mx-3 -mt-2"
+					src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+				<h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[18px] md:text-[28px]">
+					TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
 				</h1>
-			  </div>
-			<ul class="hidden sm:flex gap-5 pt-6 justify-center">
-				<li class="flex">
-					<a href="index.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">HOME</a>
+			</div>
+			<ul class="hidden sm:flex gap-5 py-2 justify-center">
+				<li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a></li>
+				<li><a href="/aboutUs.html"
+						class="text-gray-400 font-bold text-[14px] hover:text-consortium-blue-light">ABOUT US</a>
 				</li>
-				<li class="flex">
-					<a href="aboutUs.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">ABOUT
-						US</a>
+				<li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
+				<li><a href="/committee.html" class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a>
 				</li>
-
-				<li class="flex">
-					<a href="events.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">EVENTS</a>
+				<li><a href="/members.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBERS</a>
 				</li>
-				<li class="flex">
-					<a href="committee.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">COMMITTEE</a>
+				<li><a href="/membership.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER
+						REGISTRATION</a></li>
+				<li><a href="/meetings.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEETINGS</a>
 				</li>
-				<li class="flex">
-					<a href="members.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">MEMBERS</a>
+				<li><a href="/gallery.html" class="text-white font-bold text-[14px] hover:text-white">GALLERY</a>
 				</li>
-				<li class="flex">
-					<a href="membership.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">MEMBER REGISTRATION</a>
+				<li><a href="/contact.html" class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a>
 				</li>
-
-				<li class="flex">
-					<a href="meetings.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">MEETINGS</a>
-				</li>
-				<li class="flex">
-					<a href="#"
-						class="text-white font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">GALLERY</a>
-				</li>
-				<li class="flex">
-					<a href="contact.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">CONTACT</a>
-				</li>
-				<!-- <li class="flex">
-					<a href="#"
-						class="text-white font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">ENQUIRY</a>
-				</li> -->
 			</ul>
-			<div class="md:hidden -mt-9">
-				<button id="mobileMenuButton" class="text-white px-2 py-1">
-					<i class="fas fa-bars"></i>
-					<i id="closeIcon" class="fas fa-times hidden"></i>
-				</button>
-				<div id="mobileMenu" class="hidden rounded-r-md bg-white py-5 w-[35%] flex flex-col gap-2">
-					<ul>
-						<h2 class="text-blue-950 font-bold text-[18px] tracking-widest py-2 mx-5">
-							MENU
-						</h2>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">HOME</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">ABOUT
-								US</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">EVENTS</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">COMMITTEE</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">MEMBER REGISTRATION</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">MEETINGS</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">GALLERY</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">CONTACT</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<!-- <li class="py-1 pb-2 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">ENQUIRY</a>
-						</li> -->
-					</ul>
+		</div>
+
+		<!-- Event cards section -->
+		<div class="events-gallery-container max-w-6xl mx-auto px-4 py-12">
+			<!-- Events -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<!-- JS dom -->
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="bg-gray-800 py-12 pb-2">
+			<div class="container mx-auto max-w-6xl px-4">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Column 1: About -->
+					<div>
+						<h3 class="text-xl font-bold mb-4 text-consortium-blue-light">About Us</h3>
+						<p class="text-gray-300 mb-4">
+							Telangana TPO Consortium is a collaborative platform for Training & Placement Officers
+							across
+							the state to
+							enhance placement opportunities for students.
+						</p>
+					</div>
+
+					<!-- Column 2: Quick Links -->
+					<div>
+						<h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Quick Links</h3>
+						<ul class="space-y-2">
+							<li><a href="/aboutUs.html" class="text-gray-300 hover:text-white transition">About Us</a>
+							</li>
+							<li><a href="/events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
+							<li><a href="/committee.html"
+									class="text-gray-300 hover:text-white transition">Committee</a>
+							</li>
+							<li><a href="/membership.html"
+									class="text-gray-300 hover:text-white transition">Membership</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 3: Contact & Social -->
+					<div>
+						<h3 class="text-xl font-bold mb-4 text-consortium-blue-light">Connect With Us</h3>
+						<p class="text-gray-300 mb-4">Follow us on social media for updates and announcements</p>
+
+						<!-- Social Media Icons -->
+						<div class="flex gap-4">
+							<a href="https://twitter.com/ttpoconsortium"
+								class="bg-blue-500 hover:bg-blue-600 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+								<i class="fab fa-twitter text-white text-xl"></i>
+							</a>
+							<a href="https://www.instagram.com/ttpoconsortium/"
+								class="bg-gradient-to-r from-purple-500 to-pink-500 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+								<i class="fab fa-instagram text-white text-xl"></i>
+							</a>
+							<a href="https://www.linkedin.com/in/telangana-tpo-consortium-5a6b9927b/"
+								class="bg-blue-700 hover:bg-blue-800 py-3 px-4 rounded-full transition-all transform hover:scale-110">
+								<i class="fab fa-linkedin-in text-white text-xl"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Copyright -->
+				<div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+					<p>© 2025 Telangana TPO Consortium. All Rights Reserved.</p>
 				</div>
 			</div>
-			<div class="flex gallery-container justify-center my-10 p-3">
-
-				<div class="grid gallery-item grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 " data-lightbox="gallery">
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0009_owtefc.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0009_owtefc.jpg "class="w-full h-auto rounded-md p-2" />	</a>
-
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0007_an7itg.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0007_an7itg.jpg "class="w-full h-auto rounded-md p-2" />	</a>
-
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0004_fpev8b.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0004_fpev8b.jpg "class="w-full h-auto rounded-md p-2" />	</a>
-					
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0007_an7itg.jpg" data-lightbox="gallery" class="lightbox-image">
-`					<img src="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0007_an7itg.jpg "class="w-full h-auto rounded-md p-2" />	</a>	
-
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0003_lz0s5u.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0003_lz0s5u.jpg "class="w-full h-auto rounded-md p-2" />	</a>
-
-					<!-- <a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741486715/IMG-20250304-WA0001_q3g0bm.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741486715/IMG-20250304-WA0001_q3g0bm.jpg "class="w-full h-auto rounded-md p-2" />	</a> -->
-
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0008_zsktx4.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0008_zsktx4.jpg "class="w-full h-auto rounded-md p-2" />	</a>
-					
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0002_w6cisd.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src=" https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0002_w6cisd.jpg"class="w-full h-auto rounded-md p-2" />	</a>
-
-					<a href="https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0009_owtefc.jpg" data-lightbox="gallery" class="lightbox-image">
-						<img src=" https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0009_owtefc.jpg"class="w-full h-auto rounded-md p-2" />	</a>
-
-					
-					<a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375630/fghjk_oah89y.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375630/fghjk_oah89y.jpg" class="w-full h-auto rounded-md p-2" />	</a>
-					<a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3437_knjjaf.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3437_knjjaf.jpg" class="w-full h-auto rounded-lg p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg" class="w-full h-auto rounded-lg p-2" /></a>
-						 <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/panel-1_wnvuus.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/panel-1_wnvuus.jpg" class="w-full h-auto rounded-lg p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3013_bakmj1.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375633/IMG_3013_bakmj1.jpg" class="w-full h-auto rounded-lg p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/hjkl_ikl43v.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/hjkl_ikl43v.jpg" class="w-full h-auto rounded-lg p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375640/IMG_2127_rpqb7i.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375640/IMG_2127_rpqb7i.jpg" class="w-full h-auto rounded-lg p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710223200/IMG-20240312-WA0020_rkb9bp.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710223200/IMG-20240312-WA0020_rkb9bp.jpg" class="w-full h-auto  rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0021_unsoia.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0021_unsoia.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0011_u3ysaf.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0011_u3ysaf.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0013_oblueh.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0013_oblueh.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0012_qg3v93.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220267/IMG-20240312-WA0012_qg3v93.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0015_n9tro4.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0015_n9tro4.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0022_gaowm7.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220268/IMG-20240312-WA0022_gaowm7.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0018_arvub3.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0018_arvub3.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0014_ggnqhp.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0014_ggnqhp.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0023_ltvd9p.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0023_ltvd9p.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0019_nljcfp.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220269/IMG-20240312-WA0019_nljcfp.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0027_lv1lad.jpg" data-lightbox="gallery" class="lightbox-image">
-					<img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0027_lv1lad.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				   
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0026_p15yby.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0026_p15yby.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0016_r17j4f.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0016_r17j4f.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0017_ttnpqd.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0017_ttnpqd.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0028_aocci4.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220270/IMG-20240312-WA0028_aocci4.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0025_krxo44.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0025_krxo44.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <a href="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0024_szuz11.jpg" data-lightbox="gallery" class="lightbox-image">
-				  <img src="https://res.cloudinary.com/da5w3bmzc/image/upload/v1710220271/IMG-20240312-WA0024_szuz11.jpg" class="w-full h-auto rounded-md p-2" /></a>
-				  <img src="" class="w-full h-auto rounded-md p-2" />
-				  <img src="" class="w-full h-auto rounded-md p-2" />
-				  <img src="" class="w-full h-auto rounded-md p-2" />
-
-				</div>
-			  </div>
-        </div>
-		</div>
+		</footer>
 	</div>
-
-	</div>
-
-
-	</div>
-	</div>
-    
-	<!-- <div class="-bottom-0 z[40mm] bg-[#404040] flex flex-col items-center justify-center">
-        <h1 class="font-bold text-[26px] text-white">follow us on</h1>
-        <div class="flex gap-7 py-4">
-            <img class="h-[10mm]" src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691505892/free-twitter-logo-icon-2429-thumb_qlixox.png"/>
-            <img class="h-[9mm] text-white" src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691505811/87390_vtivli.png"/>
-            <img class="h-[9mm]" src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691505803/174857_1_pxvoqh.png"/>
-
-        </div>
-    </div> -->
 </body>
-<footer>
-	
-</footer>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
-integrity="sha512-o0Xre9ZoM4H5F2ODcLZYKJK+Es2g8j3FQh3lOv5zmcx4khVZcqOh4+LFB1DR+FeceRZj4qsyZkXFKBqP3oy7OQ=="
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	integrity="sha512-o0Xre9ZoM4H5F2ODcLZYKJK+Es2g8j3FQh3lOv5zmcx4khVZcqOh4+LFB1DR+FeceRZj4qsyZkXFKBqP3oy7OQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- Add your existing scripts here -->
 <script>
-// JavaScript code to toggle mobile menu
-document.getElementById("mobileMenuButton").addEventListener("click", function () {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.classList.toggle("hidden");
-});
+
+	const events = [
+		{
+			id: 1,
+			title: "Talent Connect - TConsult",
+			date: "Novermber 2024",
+			imageUrl: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1742055273/talentconnect-nov24/thw31yymywmfk3s07zt6.jpg",
+			link: "/events/talent-connect.html"
+		},
+		{
+			id: 2,
+			title: "SAP Digital Conclave",
+			date: "October 2024",
+			imageUrl: "https://res.cloudinary.com/dtkvrpdtp/image/upload/v1741485951/IMG-20250304-WA0009_owtefc.jpg",
+			link: "/events/sap-digital-conclave.html"
+		},
+		{
+			id: 3,
+			title: "Nasscom ER & D",
+			date: "July 2024",
+			imageUrl: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1742056078/nasscom24/imop5w7cdxugely8l8sw.jpg",
+			link: "/events/nasscom-2024.html"
+		},
+		{
+			id: 4,
+			title: "TOEFL meet",
+			date: "July 2024",
+			imageUrl: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1742056435/toefl/kh0j8lfempn0fhhfmdpn.jpg",
+			link: "/events/toefl-meet.html"
+		},
+		{
+			id: 5,
+			title: "Career Nexus 2024",
+			date: "April 2024",
+			imageUrl: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1742055491/careernexus24/eeencmdqb8dgqtrrzoyt.jpg",
+			link: "/events/career-nexus-2024.html"
+		},
+		{
+			id: 6,
+			title: "TTPOC Launch event",
+			date: "August 2023",
+			imageUrl: "https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg",
+			link: "/events/ttpoc-launch.html"
+		}
+	];
+
+	// Function to generate event cards using template literals
+	function generateEventCards(eventsArray) {
+		const eventsContainer = document.querySelector('.events-gallery-container .grid');
+
+		eventsContainer.innerHTML = '';
+
+		const eventCardsHTML = eventsArray.map(event => `
+    <a href="${event.link}" class="group">
+      <div class="event-card bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 border border-white border-opacity-20">
+        <div class="relative">
+          <img src="${event.imageUrl}" class="w-full h-48 object-cover" alt="${event.title}" />
+          <div class="absolute bg-black  transition-all duration-300"></div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-white text-xl font-bold mb-2">${event.title}</h3>
+          <p class="text-gray-200 mb-3">${event.date}</p>
+          <div class="flex items-center text-white">
+            <span>View gallery</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  `).join('');
+
+		// Insert the cards into the container
+		eventsContainer.innerHTML = eventCardsHTML;
+	}
+
+	// Call the function when the DOM is fully loaded
+	document.addEventListener('DOMContentLoaded', () => {
+		generateEventCards(events);
+	});
+
 </script>
+
+</html>
