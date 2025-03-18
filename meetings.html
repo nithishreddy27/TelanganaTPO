@@ -6,173 +6,114 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Telangana TPO Consortium</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="icon" type="image/png"
+		href="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&family=Ubuntu&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<link rel="stylesheet" href="./css/navbar.css">
+	<script src="./js/navbar.js"></script>
+
 </head>
 
-<body class="">
-	<div class="relative w-full inset-0">
-		<img class="max-w-full min-h-screen"
+<body class="bg-gray-100">
+	<div class="relative w-full">
+		<img class="max-w-full min-h-screen object-cover"
 			src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691485885/Rectangle_2_c5utnz.png"
 			alt="Background Image" />
-		<div class="absolute top-3 pt-2 w-full">
-			<div class="flex flex-row justify-center ">
-				<img class="h-[35mm] mx-3 -mt-2"
-					src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-				<h1
-					class="font-fira-sans text-white md:pt-8   text-center font-bold tracking-wide font-fira-sans text-[18px] md:text-[28px]">
-					TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
-				</h1>
-			</div>
-			<ul class="hidden sm:flex gap-5 pt-6 justify-center">
-				<li class="flex">
-					<a href="index.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">HOME</a>
-				</li>
-				<li class="flex">
-					<a href="aboutUs.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">ABOUT
-						US</a>
-				</li>
 
-				<li class="flex">
-					<a href="events.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">EVENTS</a>
-				</li>
-				<li class="flex">
-					<a href="committee.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">COMMITTEE</a>
-				</li>
-				<li class="flex">
-					<a href="members.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">MEMBERS</a>
-				</li>
-				<li class="flex">
-					<a href="membership.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">MEMBER REGISTRATION</a>
-				</li>
-
-				<li class="flex">
-					<a href="#"
-						class="text-white font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">MEETINGS</a>
-				</li>
-				<li class="flex">
-					<a href="gallery.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">GALLERY</a>
-				</li>
-				<li class="flex">
-					<a href="contact.html"
-						class="text-gray-400 font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">CONTACT</a>
-				</li>
-				<!-- <li class="flex">
-					<a href="#"
-						class="text-white font-bold px-1 flex-shrink-0 text-[14px] hover:text-white pointer">ENQUIRY</a>
-				</li> -->
-			</ul>
-			<div class="md:hidden -mt-9">
-				<button id="mobileMenuButton" class="text-white px-2 py-1">
-					<i class="fas fa-bars"></i>
-					<i id="closeIcon" class="fas fa-times hidden"></i>
-				</button>
-				<div id="mobileMenu" class="hidden rounded-r-md bg-white py-5 w-[35%] flex flex-col gap-2">
-					<ul>
-						<h2 class="text-blue-950 font-bold text-[18px] tracking-widest py-2 mx-5">
-							MENU
-						</h2>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">HOME</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">ABOUT
-								US</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">EVENTS</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">COMMITTEE</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">MEMBER REGISTRATION</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">MEETINGS</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">GALLERY</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<li class="py-1 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">CONTACT</a>
-						</li>
-						<div class="w-45 h-[0.061mm] bg-gray-100 mx-2"></div>
-						<!-- <li class="py-1 pb-2 hover:bg-gray-100">
-							<a href="#"
-								class="text-blue-900 font-bold mx-5 text-[12px] py-2 hover:text-blue-950 pointer">ENQUIRY</a>
-						</li> -->
-					</ul>
+		<!-- Header Section -->
+		<div class="absolute top-0 w-full">
+			<div class="w-full bg-consortium-blue-dark bg-opacity-90">
+				<!-- Mobile View -->
+				<div class="flex sm:hidden justify-between items-center py-2 px-4">
+					<div class="flex items-center">
+						<img class="h-16 mr-2 -mt-2"
+							src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+						<h1 class="font-fira-sans text-white font-bold tracking-wide text-[16px]">
+							TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+						</h1>
+					</div>
+					<!-- Mobile Hamburger Button -->
+					<button id="menu-toggle" class="text-white focus:outline-none">
+						<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
 				</div>
+
+				<!-- Desktop View -->
+				<div class="hidden sm:flex justify-center items-center py-2">
+					<img class="h-20 mx-3 -mt-2"
+						src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+					<h1 class="font-fira-sans text-white font-bold tracking-wide text-[28px]">
+						TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+					</h1>
+				</div>
+
+				<!-- Desktop Navigation -->
+				<ul class="hidden sm:flex gap-5 py-2 justify-center">
+					<li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a></li>
+					<li><a href="/aboutUs.html" class="text-gray-400 font-bold text-[14px] hover:text-white">ABOUT
+							US</a></li>
+					<li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a>
+					</li>
+					<li><a href="/committee.html"
+							class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a></li>
+					<li><a href="/members.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBERS</a>
+					</li>
+					<li><a href="/membership.html" class="text-gray-400 font-bold text-[14px] hover:text-white">MEMBER
+							REGISTRATION</a></li>
+					<li><a href="/meetings.html" class="text-white font-bold text-[14px] hover:text-white">MEETINGS</a>
+					</li>
+					<li><a href="/gallery.html" class="text-gray-400 font-bold text-[14px] hover:text-white">GALLERY</a>
+					</li>
+					<li><a href="/contact.html" class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a>
+					</li>
+				</ul>
 			</div>
-			<div class="flex flex-col py-4 justify-center my-10">
-				<p class="text-white text-center py-3 text-[25px] font-bold">MEETINGS</p>
-				<!-- <p class="text-white text-center py-8 text-[23px] font-bold">ANNUAL GENERAL BODY MEETING</p>
-			<p class="text-white text-center py-4 text-[18px]">HELD ON 15TH DECEMBER 2019</p>
-			<p class="text-white text-center py-4 text-[18px]">AT</p>
-			<p class="text-white text-center py-4 text-[18px]">SUN RAY RESORTS</p>
-			<p class="text-white text-center py-4  bg-sky-500 px-10 mx-auto my-4 rounded-md text-[18px]">CLICK HERE FOR MORE INFO</p>
-            </div> -->
+
+			<!-- Mobile Navigation Overlay -->
+			<div id="mobile-menu"
+				class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none transition-all duration-300">
+				<!-- Close Button -->
+				<button id="close-menu" class="absolute top-6 right-6 text-white">
+					<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+							d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+
+				<!-- Mobile Menu Links -->
+				<ul class="flex flex-col h-full justify-center items-center space-y-6">
+					<li><a href="/index.html" class="text-gray-400 font-bold text-2xl hover:text-white">HOME</a></li>
+					<li><a href="/aboutUs.html" class="text-gray-400 font-bold text-2xl hover:text-white">ABOUT US</a>
+					</li>
+					<li><a href="/events.html" class="text-gray-400 font-bold text-2xl hover:text-white">EVENTS</a></li>
+					<li><a href="/committee.html"
+							class="text-gray-400 font-bold text-2xl hover:text-white">COMMITTEE</a></li>
+					<li><a href="/members.html" class="text-gray-400 font-bold text-2xl hover:text-white">MEMBERS</a>
+					</li>
+					<li><a href="/membership.html"
+							class="text-gray-400 font-bold text-2xl hover:text-white">REGISTRATION</a></li>
+					<li><a href="/meetings.html" class="text-white  font-bold text-2xl hover:text-white">MEETINGS</a>
+					</li>
+					<li><a href="/gallery.html" class="text-gray-400 font-bold text-2xl hover:text-white">GALLERY</a>
+					</li>
+					<li><a href="/contact.html" class="text-gray-400 font-bold text-2xl hover:text-white">CONTACT</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 
-	</div>
-
-
-	</div>
-	</div>
-	<div class="h-[40mm] bg-[#404040] flex flex-col items-center justify-center">
-		<h1 class="font-bold text-[26px] text-white">follow us on</h1>
-		<div class="flex gap-7 py-4">
-			<a href="https://twitter.com/ttpoconsortium">
-				<img class="h-[10mm]"
-					src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691505892/free-twitter-logo-icon-2429-thumb_qlixox.png" />
-			</a>
-			<a href="https://www.instagram.com/ttpoconsortium/">
-				<img class="h-[9mm] text-white"
-					src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691505811/87390_vtivli.png" />
-			</a>
-			<a href="https://www.linkedin.com/in/telangana-tpo-consortium-5a6b9927b/">
-				<img class="h-[9mm]"
-					src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691505803/174857_1_pxvoqh.png" />
-			</a>
-		</div>
-	</div>
+	<!-- JavaScript for Toggling Mobile Menu -->
 
 </body>
 
-<script>
-	// JavaScript code to toggle mobile menu
-	document
-		.getElementById("mobileMenuButton")
-		.addEventListener("click", function () {
-			const mobileMenu = document.getElementById("mobileMenu");
-			mobileMenu.classList.toggle("hidden");
-		});
-</script>
+</html>

@@ -1,0 +1,28 @@
+#mobile-menu {
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform, opacity;
+  }
+  
+  /* Add a slight scale and fade effect to menu items */
+  #mobile-menu ul li a {
+    display: inline-block;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease, color 0.3s ease;
+  }
+  
+  #mobile-menu.opacity-100 ul li a {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* Stagger the animation of menu items */
+  #mobile-menu ul li:nth-child(1) a { transition-delay: 0.1s; }
+  #mobile-menu ul li:nth-child(2) a { transition-delay: 0.15s; }
+  #mobile-menu ul li:nth-child(3) a { transition-delay: 0.2s; }
+  #mobile-menu ul li:nth-child(4) a { transition-delay: 0.25s; }
+  #mobile-menu ul li:nth-child(5) a { transition-delay: 0.3s; }
+  #mobile-menu ul li:nth-child(6) a { transition-delay: 0.35s; }
+  #mobile-menu ul li:nth-child(7) a { transition-delay: 0.4s; }
+  #mobile-menu ul li:nth-child(8) a { transition-delay: 0.45s; }
+  #mobile-menu ul li:nth-child(9) a { transition-delay: 0.5s; }

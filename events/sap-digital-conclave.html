@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TTPOC Launch Event - Telangana TPO Consortium</title>
+    <title>SAP Digital Conclave - SAP Career Development Centre Launch</title>
     <meta name="description"
-        content="Join us for the TTPOC Launch Event, a groundbreaking initiative to enhance employability, strengthen industry-academia partnerships, and drive career advancement in Telangana." />
+        content="SAP Digital Conclave celebrates the launch of the SAP Career Development Centre, empowering students with industry-relevant skills, training, and career opportunities in the SAP ecosystem." />
     <meta name="keywords"
-        content="TTPOC Launch Event, Telangana TPO, Training and Placement Officers, Employability, Industry Collaboration, Skill Development, Career Advancement" />
-    <meta name="author" content="Telangana TPO Consortium" />
-    <meta property="og:title" content="TTPOC Launch Event - Telangana TPO Consortium" />
+        content="SAP Digital Conclave, SAP Career Development Centre, SAP Training, Career Opportunities, Skill Development, SAP Ecosystem, Industry Collaboration, Student Empowerment" />
+    <meta name="author" content="SAP & Telangana TPO Consortium" />
+    <meta property="og:title" content="SAP Digital Conclave - SAP Career Development Centre Launch" />
     <meta property="og:description"
-        content="TTPOC Launch Event - connecting industry leaders, training and placement officers, and academia for a collaborative skill development initiative." />
+        content="Join the SAP Digital Conclave for the launch of the SAP Career Development Centre, featuring expert panels, workshops, and career-enhancing opportunities for students." />
     <meta property="og:image" content="https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg" />
-    <meta property="og:url" content="https://ttpoconsortium.com/events/ttpoc-launch.html" />
-    <link rel="canonical" href="https://ttpoconsortium.com/events/ttpoc-launch.html" />
+    <meta property="og:url" content="https://ttpoconsortium.com/events/sap-digital-conclave.html" />
+    <link rel="icon" type="image/png"
+		href="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+    <link rel="canonical" href="https://ttpoconsortium.com/events/sap-digital-conclave.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&family=Ubuntu&display=swap"
@@ -24,28 +26,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/navbar.js"></script>
+    <link rel="stylesheet" href="../css/navbar.css">
     <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Event",
-                "name": "TTPOC Launch Event",
-                "startDate": "2024-06-15T09:00:00+05:30",
-                "endDate": "2024-06-15T17:00:00+05:30",
-                "location": {
-                    "@type": "Place",
-                    "name": "Hyderabad",
-                    "address": "Hyderabad, Telangana, India"
-                },
-                "image": "https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg",
-                "description": "A premier event bringing together Training & Placement Officers, industry leaders, and academia to drive employability and career advancement.",
-                "organizer": {
-                    "@type": "Organization",
-                    "name": "Telangana TPO Consortium",
-                    "url": "https://ttpoconsortium.com/"
-                }
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "SAP Digital Conclave - Launch of SAP Career Development Centre",
+            "startDate": "2024-10-04T09:00:00+05:30",
+            "endDate": "2024-10-04T17:00:00+05:30",
+            "location": {
+                "@type": "Place",
+                "name": "Vivanta by Taj, Begumpet",
+                "address": "Hyderabad, Telangana, India"
+            },
+            "image": "https://res.cloudinary.com/da5w3bmzc/image/upload/v1707375632/P3_a3jswa.jpg",
+            "description": "The SAP Digital Conclave marks the launch of the SAP Career Development Centre, featuring expert panels, workshops, and discussions on SAP technologies and career pathways.",
+            "organizer": {
+                "@type": "Organization",
+                "name": "SAP & Telangana TPO Consortium",
+                "url": "https://ttpoconsortium.com/"
             }
-        </script>
+        }
+    </script>
 </head>
+
 <script>
     tailwind.config = {
         theme: {
@@ -108,17 +113,41 @@
     <div class="relative z-10 w-full">
         <!-- Navbar -->
         <div class="w-full bg-consortium-blue-dark bg-opacity-90">
-            <div class="flex flex-row justify-center items-center py-2">
+            <!-- Mobile View: Logo and Title on left, Hamburger on right -->
+            <div class="flex sm:hidden flex-row justify-between items-center py-2 px-4">
+                <div class="flex items-center">
+                    <img class="h-16 mr-2 -mt-2"
+                        src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
+                    <h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[16px]">
+                        TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
+                    </h1>
+                </div>
+
+                <!-- Mobile Navigation Hamburger Button -->
+                <div>
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop View: Centered Logo and Title -->
+            <div class="hidden sm:flex flex-row justify-center items-center py-2">
                 <img class="h-20 mx-3 -mt-2"
                     src="https://res.cloudinary.com/dbenkbws8/image/upload/v1691501311/Asset_3_1_ay28ar.png" />
-                <h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[18px] md:text-[28px]">
+                <h1 class="font-fira-sans text-white text-center font-bold tracking-wide text-[28px]">
                     TELANGANA TRAINING & PLACEMENT OFFICERS CONSORTIUM
                 </h1>
             </div>
+
+            <!-- Desktop Navigation -->
             <ul class="hidden sm:flex gap-5 py-2 justify-center">
                 <li><a href="/index.html" class="text-gray-400 font-bold text-[14px] hover:text-white">HOME</a></li>
-                <li><a href="/aboutUs.html"
-                        class="text-gray-400 font-bold text-[14px] hover:text-consortium-blue-light">ABOUT US</a>
+                <li><a href="/aboutUs.html" class="text-gray-400 font-bold text-[14px] hover:text-white">ABOUT US</a>
                 </li>
                 <li><a href="/events.html" class="text-gray-400 font-bold text-[14px] hover:text-white">EVENTS</a></li>
                 <li><a href="/committee.html" class="text-gray-400 font-bold text-[14px] hover:text-white">COMMITTEE</a>
@@ -134,6 +163,55 @@
                 <li><a href="/contact.html" class="text-gray-400 font-bold text-[14px] hover:text-white">CONTACT</a>
                 </li>
             </ul>
+        </div>
+
+        <!-- Mobile Navigation Overlay (Hidden by default) -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-consortium-blue-dark bg-opacity-95 z-50 transform -translate-y-full opacity-0 pointer-events-none">
+            <!-- Close Button (X Mark) -->
+            <div class="absolute top-6 right-6">
+                <button id="close-menu"
+                    class="text-white p-2 focus:outline-none rounded-full hover:bg-consortium-blue-light transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex flex-col h-full justify-center items-center">
+                <ul class="space-y-6 text-center">
+                    <li><a href="/index.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">HOME</a>
+                    </li>
+                    <li><a href="/aboutUs.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">ABOUT
+                            US</a></li>
+                    <li><a href="/events.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">EVENTS</a>
+                    </li>
+                    <li><a href="/committee.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">COMMITTEE</a>
+                    </li>
+                    <li><a href="/members.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBERS</a>
+                    </li>
+                    <li><a href="/membership.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEMBER
+                            REGISTRATION</a></li>
+                    <li><a href="/meetings.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">MEETINGS</a>
+                    </li>
+                    <li><a href="/gallery.html"
+                            class="text-white font-bold text-2xl hover:text-white transition-colors duration-300">GALLERY</a>
+                    </li>
+                    <li><a href="/contact.html"
+                            class="text-gray-400 font-bold text-2xl hover:text-white transition-colors duration-300">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- Event container -->
