@@ -177,7 +177,11 @@
 
   <!-- Video Background Section -->
   <div class="relative h-screen w-full overflow-hidden">
-    <div id="player" class="absolute inset-0 z-10"></div>
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="https://res.cloudinary.com/da5w3bmzc/video/upload/v1746466263/careernexus25/Trailer_1_wrrn2b.mp4"
+        type="video/mp4">
+    </video>
+
     <div class="absolute inset-0 bg-consortium-blue bg-opacity-70 flex flex-col justify-center items-center z-20">
       <div class="container mx-auto px-4 flex flex-col items-center max-w-3xl">
         <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 text-shadow">
@@ -321,53 +325,6 @@
   </div>
 </body>
 <script>
-  let tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  let firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  let player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      videoId: '4cyMjEqJkqo', // Video ID from your URL
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        rel: 0,
-        showinfo: 0,
-        mute: 1,
-        loop: 1,
-        playlist: '4cyMjEqJkqo', // Same video ID for looping
-        modestbranding: 1,
-        playsinline: 1
-      },
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-  }
-
-  function onPlayerReady(event) {
-    event.target.playVideo();
-
-    // Style the YouTube iframe
-    let iframe = document.querySelector('#player');
-    iframe.style.position = 'absolute';
-    iframe.style.top = '50%';
-    iframe.style.left = '50%';
-    iframe.style.width = '100vw';
-    iframe.style.height = '100vh';
-    iframe.style.transform = 'translate(-50%, -50%) scale(1.2)'; // Reduced scale from 1.5 to 1.2
-    iframe.style.zIndex = '1';
-  }
-
-  function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-      player.playVideo();
-    }
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     const carousel = document.getElementById('carousel');
